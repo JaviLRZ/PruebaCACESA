@@ -1,6 +1,6 @@
 # 🗂 Gestor de Peticiones de Material
 
-Aplicación de escritorio en **C# / Windows Forms (.NET 10)** desarrollada como prueba técnica.  
+Aplicación de escritorio en **C# / Windows Forms (.NET 8)** desarrollada como prueba técnica.  
 Permite gestionar usuarios y solicitudes de material con roles diferenciados (Supervisor / Usuario).
 
 ---
@@ -8,7 +8,7 @@ Permite gestionar usuarios y solicitudes de material con roles diferenciados (Su
 ## 🚀 Cómo ejecutar
 
 ### Prerrequisitos
-- [.NET 10 SDK](https://dotnet.microsoft.com/download) (o .NET 8+)
+- [.NET 8 SDK](https://dotnet.microsoft.com/download)
 - Windows (WinForms es exclusivo de Windows)
 
 ### Pasos
@@ -23,7 +23,7 @@ dotnet run --project GestorPeticiones/GestorPeticiones.csproj
 |---------|-----------|-----|
 | `admin` | `admin123` | Supervisor |
 
-> Los datos se persisten en `GestorPeticiones/bin/Debug/net10.0-windows/Data/`  
+> Los datos se persisten en `GestorPeticiones/bin/Debug/net8.0-windows/Data/`  
 > (ficheros `usuarios.json` y `peticiones.json`)
 
 ---
@@ -100,7 +100,7 @@ return query.OrderByDescending(p => p.FechaSolicitud).ToList();
 
 ## 🛠 Tecnologías
 
-- **C# / .NET 10** – Windows Forms
+- **C# / .NET 8** – Windows Forms
 - **System.Text.Json** – Persistencia en JSON (sin dependencias externas)
 - **LINQ** – Búsquedas y filtros
 - **Patrón Repository** – Desacoplamiento de datos
