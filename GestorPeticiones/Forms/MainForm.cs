@@ -13,12 +13,12 @@ namespace GestorPeticiones.Forms
         private readonly Usuario _usuarioActual;
         private readonly IUsuarioService _usuarioService;
 
-        private Label lblBienvenida;
-        private Label lblRol;
-        private Button btnUsuarios;
-        private Button btnPeticiones;
-        private Button btnCerrarSesion;
-        private Panel pnlBotones;
+        private Label lblBienvenida = null!;
+        private Label lblRol = null!;
+        private Button btnUsuarios = null!;
+        private Button btnPeticiones = null!;
+        private Button btnCerrarSesion = null!;
+        private Panel pnlBotones = null!;
 
         public MainForm(Usuario usuarioActual, IUsuarioService usuarioService)
         {

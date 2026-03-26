@@ -16,29 +16,29 @@ namespace GestorPeticiones.Forms
         private readonly IUsuarioService _usuarioService;
 
         // ── Controles de búsqueda ──────────────────────────────────────────────
-        private GroupBox grpFiltros;
-        private TextBox txtDescripcionFiltro;
-        private DateTimePicker dtpDesde;
-        private CheckBox chkUsarDesde;
-        private DateTimePicker dtpHasta;
-        private CheckBox chkUsarHasta;
-        private ComboBox cmbEstadoFiltro;
-        private TextBox txtNombreUsuarioFiltro;
-        private Label lblNombreUsuarioFiltro;
-        private Button btnBuscar;
-        private Button btnLimpiar;
+        private GroupBox grpFiltros = null!;
+        private TextBox txtDescripcionFiltro = null!;
+        private DateTimePicker dtpDesde = null!;
+        private CheckBox chkUsarDesde = null!;
+        private DateTimePicker dtpHasta = null!;
+        private CheckBox chkUsarHasta = null!;
+        private ComboBox cmbEstadoFiltro = null!;
+        private TextBox txtNombreUsuarioFiltro = null!;
+        private Label lblNombreUsuarioFiltro = null!;
+        private Button btnBuscar = null!;
+        private Button btnLimpiar = null!;
 
         // ── Controles principales ─────────────────────────────────────────────
-        private DataGridView dgvPeticiones;
-        private GroupBox grpNueva;
-        private TextBox txtDescripcionNueva;
-        private Button btnCrearPeticion;
+        private DataGridView dgvPeticiones = null!;
+        private GroupBox grpNueva = null!;
+        private TextBox txtDescripcionNueva = null!;
+        private Button btnCrearPeticion = null!;
 
         // ── Acciones supervisor ───────────────────────────────────────────────
-        private GroupBox grpAccion;
-        private TextBox txtComentario;
-        private Button btnAceptar;
-        private Button btnRechazar;
+        private GroupBox grpAccion = null!;
+        private TextBox txtComentario = null!;
+        private Button btnAceptar = null!;
+        private Button btnRechazar = null!;
 
         public PeticionForm(Usuario usuarioActual, IPeticionService peticionService,
                               IUsuarioService usuarioService)

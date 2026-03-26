@@ -12,13 +12,13 @@ namespace GestorPeticiones.Forms
         private readonly IUsuarioService _usuarioService;
 
         // ── Controles ─────────────────────────────────────────────────────────
-        private Label lblTitulo;
-        private Label lblUsuario;
-        private Label lblContrasena;
-        private TextBox txtUsuario;
-        private TextBox txtContrasena;
-        private Button btnEntrar;
-        private Label lblError;
+        private Label lblTitulo = null!;
+        private Label lblUsuario = null!;
+        private Label lblContrasena = null!;
+        private TextBox txtUsuario = null!;
+        private TextBox txtContrasena = null!;
+        private Button btnEntrar = null!;
+        private Label lblError = null!;
 
         public LoginForm(IUsuarioService usuarioService)
         {

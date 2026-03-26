@@ -122,4 +122,9 @@ La aplicación guarda los datos en JSON automáticamente:
   }
 ]
 ```
+---
 
+## ⚡️ Desarrollo y Velocidad
+
+Este proyecto ha sido desarrollado utilizando el asistente **Antigravity**.  
+Debido a las restricciones de tiempo de la prueba técnica (2 horas), se optó por esta herramienta para garantizar la máxima **calidad de código**.

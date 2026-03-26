@@ -13,19 +13,19 @@ namespace GestorPeticiones.Forms
         private Usuario? _usuarioSeleccionado;
 
         // ── Controles ─────────────────────────────────────────────────────────
-        private DataGridView dgvUsuarios;
-        private Button btnNuevo;
-        private Button btnEditar;
-        private Button btnEliminar;
-        private GroupBox grpDetalle;
-        private TextBox txtNombre;
-        private TextBox txtApellidos;
-        private TextBox txtDireccion;
-        private TextBox txtNombreUsuario;
-        private TextBox txtContrasena;
-        private CheckBox chkEsSupervisor;
-        private Button btnGuardar;
-        private Button btnCancelar;
+        private DataGridView dgvUsuarios = null!;
+        private Button btnNuevo = null!;
+        private Button btnEditar = null!;
+        private Button btnEliminar = null!;
+        private GroupBox grpDetalle = null!;
+        private TextBox txtNombre = null!;
+        private TextBox txtApellidos = null!;
+        private TextBox txtDireccion = null!;
+        private TextBox txtNombreUsuario = null!;
+        private TextBox txtContrasena = null!;
+        private CheckBox chkEsSupervisor = null!;
+        private Button btnGuardar = null!;
+        private Button btnCancelar = null!;
 
         public UsuarioForm(IUsuarioService usuarioService)
         {
