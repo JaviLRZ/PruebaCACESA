@@ -60,6 +60,7 @@ namespace GestorPeticiones.Forms
                 BorderStyle       = BorderStyle.None
             };
             dgvUsuarios.SelectionChanged += DgvUsuarios_SelectionChanged;
+            UIHelper.FormatearGrid(dgvUsuarios);
 
             // ── Botones de acción ─────────────────────────────────────────────
             btnNuevo   = CrearBoton("➕ Nuevo",   new Point(470, 10),  Color.FromArgb(30, 80, 160));
@@ -70,6 +71,10 @@ namespace GestorPeticiones.Forms
             btnEliminar.Click += BtnEliminar_Click;
             btnEditar.Enabled   = false;
             btnEliminar.Enabled = false;
+
+            UIHelper.HacerRedondeado(btnNuevo);
+            UIHelper.HacerRedondeado(btnEditar);
+            UIHelper.HacerRedondeado(btnEliminar);
 
             // ── Panel de detalle / edición ────────────────────────────────────
             grpDetalle = new GroupBox
@@ -99,10 +104,12 @@ namespace GestorPeticiones.Forms
             };
             grpDetalle.Controls.Add(chkEsSupervisor);
 
-            btnGuardar  = CrearBoton("💾 Guardar",   new Point(10, 260),  Color.FromArgb(30, 80, 160), grpDetalle);
-            btnCancelar = CrearBoton("✖ Cancelar",  new Point(210, 260), Color.FromArgb(120, 120, 120), grpDetalle);
+            btnGuardar  = CrearBoton("💾 Guardar",   new Point(15, 260),  Color.FromArgb(30, 80, 160), grpDetalle);
+            btnCancelar = CrearBoton("✖ Cancelar",  new Point(215, 260), Color.FromArgb(120, 120, 120), grpDetalle);
             btnGuardar.Click  += BtnGuardar_Click;
             btnCancelar.Click += (s, e) => MostrarDetalle(false);
+            UIHelper.HacerRedondeado(btnGuardar);
+            UIHelper.HacerRedondeado(btnCancelar);
 
             Controls.AddRange(new Control[]
             {

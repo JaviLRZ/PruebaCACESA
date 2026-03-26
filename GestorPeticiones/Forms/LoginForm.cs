@@ -45,23 +45,23 @@ namespace GestorPeticiones.Forms
                 Font      = new Font("Segoe UI", 13f, FontStyle.Bold),
                 ForeColor = Color.FromArgb(30, 80, 160),
                 AutoSize  = true,
-                Location  = new Point(50, 20)
+                Location  = new Point(75, 20) // Centrado aproximado para el texto
             };
 
             // ── Usuario ───────────────────────────────────────────────────────
-            lblUsuario = new Label  { Text = "Usuario:", Location = new Point(40, 80), AutoSize = true };
+            lblUsuario = new Label  { Text = "Usuario:", Location = new Point(45, 80), AutoSize = true };
             txtUsuario = new TextBox
             {
-                Location = new Point(40, 100),
+                Location = new Point(45, 100),
                 Size     = new Size(290, 24),
                 Name     = "txtUsuario"
             };
 
             // ── Contraseña ────────────────────────────────────────────────────
-            lblContrasena = new Label { Text = "Contraseña:", Location = new Point(40, 135), AutoSize = true };
+            lblContrasena = new Label { Text = "Contraseña:", Location = new Point(45, 135), AutoSize = true };
             txtContrasena = new TextBox
             {
-                Location     = new Point(40, 155),
+                Location     = new Point(45, 155),
                 Size         = new Size(290, 24),
                 PasswordChar = '●',
                 Name         = "txtContrasena"
@@ -74,14 +74,14 @@ namespace GestorPeticiones.Forms
                 Text      = string.Empty,
                 ForeColor = Color.Red,
                 AutoSize  = true,
-                Location  = new Point(40, 190)
+                Location  = new Point(45, 190)
             };
 
             // ── Botón Entrar ──────────────────────────────────────────────────
             btnEntrar = new Button
             {
                 Text      = "Entrar",
-                Location  = new Point(165, 210),
+                Location  = new Point(135, 210), // Centrado (380-110)/2
                 Size      = new Size(110, 33),
                 BackColor = Color.FromArgb(30, 80, 160),
                 ForeColor = Color.White,
@@ -91,6 +91,7 @@ namespace GestorPeticiones.Forms
             };
             btnEntrar.FlatAppearance.BorderSize = 0;
             btnEntrar.Click += BtnEntrar_Click;
+            UIHelper.HacerRedondeado(btnEntrar);
 
             // ── Añadir controles ──────────────────────────────────────────────
             Controls.AddRange(new Control[]

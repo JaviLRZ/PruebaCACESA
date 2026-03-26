@@ -123,6 +123,9 @@ namespace GestorPeticiones.Forms
             btnBuscar.Click  += (s, e) => EjecutarBusqueda();
             btnLimpiar.Click += BtnLimpiar_Click;
 
+            UIHelper.HacerRedondeado(btnBuscar, 10);
+            UIHelper.HacerRedondeado(btnLimpiar, 10);
+
             Controls.Add(grpFiltros);
 
             // ── DataGridView ──────────────────────────────────────────────────
@@ -140,6 +143,7 @@ namespace GestorPeticiones.Forms
                 BorderStyle       = BorderStyle.None
             };
             dgvPeticiones.SelectionChanged += DgvPeticiones_SelectionChanged;
+            UIHelper.FormatearGrid(dgvPeticiones);
             Controls.Add(dgvPeticiones);
 
             // ── Nueva petición ────────────────────────────────────────────────
@@ -156,6 +160,7 @@ namespace GestorPeticiones.Forms
             btnCrearPeticion = CrearBotonPequeno("Enviar", new Point(390, 40), Color.FromArgb(0, 140, 90));
             grpNueva.Controls.AddRange(new Control[] { txtDescripcionNueva, btnCrearPeticion });
             btnCrearPeticion.Click += BtnCrearPeticion_Click;
+            UIHelper.HacerRedondeado(btnCrearPeticion, 10);
             Controls.Add(grpNueva);
 
             // ── Acciones supervisor ───────────────────────────────────────────
@@ -177,6 +182,8 @@ namespace GestorPeticiones.Forms
             grpAccion.Controls.AddRange(new Control[] { txtComentario, btnAceptar, btnRechazar });
             btnAceptar.Click  += BtnAceptar_Click;
             btnRechazar.Click += BtnRechazar_Click;
+            UIHelper.HacerRedondeado(btnAceptar, 10);
+            UIHelper.HacerRedondeado(btnRechazar, 10);
             Controls.Add(grpAccion);
         }
 

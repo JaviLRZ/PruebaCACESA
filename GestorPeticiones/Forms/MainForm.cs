@@ -43,7 +43,9 @@ namespace GestorPeticiones.Forms
                 Text      = $"Bienvenido/a, {_usuarioActual.NombreCompleto}",
                 Font      = new Font("Segoe UI", 13f, FontStyle.Bold),
                 ForeColor = Color.FromArgb(30, 80, 160),
-                AutoSize  = true,
+                AutoSize  = false,
+                Size      = new Size(360, 30),
+                TextAlign = ContentAlignment.MiddleCenter,
                 Location  = new Point(30, 25)
             };
 
@@ -52,15 +54,17 @@ namespace GestorPeticiones.Forms
                 Text      = _usuarioActual.EsSupervisor ? "Rol: Supervisor" : "Rol: Usuario",
                 Font      = new Font("Segoe UI", 9.5f, FontStyle.Italic),
                 ForeColor = _usuarioActual.EsSupervisor ? Color.DarkGreen : Color.Gray,
-                AutoSize  = true,
+                AutoSize  = false,
+                Size      = new Size(360, 20),
+                TextAlign = ContentAlignment.MiddleCenter,
                 Location  = new Point(30, 55)
             };
 
             // ── Panel de botones ──────────────────────────────────────────────
             pnlBotones = new Panel
             {
-                Location  = new Point(30, 90),
-                Size      = new Size(350, 150),
+                Location  = new Point(55, 90), // Centrado (420-310)/2 = 55
+                Size      = new Size(310, 150),
                 BackColor = Color.Transparent
             };
 
@@ -79,6 +83,7 @@ namespace GestorPeticiones.Forms
             };
             btnUsuarios.FlatAppearance.BorderSize = 0;
             btnUsuarios.Click += BtnUsuarios_Click;
+            UIHelper.HacerRedondeado(btnUsuarios);
 
             // Peticiones de Material
             btnPeticiones = new Button
@@ -94,6 +99,7 @@ namespace GestorPeticiones.Forms
             };
             btnPeticiones.FlatAppearance.BorderSize = 0;
             btnPeticiones.Click += BtnPeticiones_Click;
+            UIHelper.HacerRedondeado(btnPeticiones);
 
             pnlBotones.Controls.AddRange(new Control[] { btnUsuarios, btnPeticiones });
 
@@ -110,6 +116,7 @@ namespace GestorPeticiones.Forms
             };
             btnCerrarSesion.FlatAppearance.BorderSize = 0;
             btnCerrarSesion.Click += (s, e) => Close();
+            UIHelper.HacerRedondeado(btnCerrarSesion, 10);
 
             Controls.AddRange(new Control[]
             {
