@@ -8,31 +8,13 @@ namespace GestorPeticiones
     public static class UIHelper
     {
         /// <summary>
-        /// Aplica un diseño redondeado a un botón.
+        /// Aplica un diseño plano y cuadrado a un botón.
         /// </summary>
-        public static void HacerRedondeado(Button btn, int radio = 15)
+        public static void FormatearBoton(Button btn, int radioUnused = 0)
         {
             btn.FlatStyle = FlatStyle.Flat;
             btn.FlatAppearance.BorderSize = 0;
-            
-            // Evento para redibujar el borde redondeado al cambiar el tamaño
-            btn.Resize += (s, e) => ActualizarRegionRedondeada(btn, radio);
-            ActualizarRegionRedondeada(btn, radio);
-        }
-
-        private static void ActualizarRegionRedondeada(Button btn, int radio)
-        {
-            Rectangle rect = new Rectangle(0, 0, btn.Width, btn.Height);
-            GraphicsPath path = new GraphicsPath();
-            
-            int d = radio * 2;
-            path.AddArc(rect.X, rect.Y, d, d, 180, 90);
-            path.AddArc(rect.Right - d, rect.Y, d, d, 270, 90);
-            path.AddArc(rect.Right - d, rect.Bottom - d, d, d, 0, 90);
-            path.AddArc(rect.X, rect.Bottom - d, d, d, 90, 90);
-            path.CloseFigure();
-            
-            btn.Region = new Region(path);
+            // Se elimina el código de redondeo por diseño más limpio y nativo
         }
 
         /// <summary>

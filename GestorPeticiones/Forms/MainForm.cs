@@ -83,7 +83,7 @@ namespace GestorPeticiones.Forms
             };
             btnUsuarios.FlatAppearance.BorderSize = 0;
             btnUsuarios.Click += BtnUsuarios_Click;
-            UIHelper.HacerRedondeado(btnUsuarios);
+            UIHelper.FormatearBoton(btnUsuarios);
 
             // Peticiones de Material
             btnPeticiones = new Button
@@ -99,7 +99,7 @@ namespace GestorPeticiones.Forms
             };
             btnPeticiones.FlatAppearance.BorderSize = 0;
             btnPeticiones.Click += BtnPeticiones_Click;
-            UIHelper.HacerRedondeado(btnPeticiones);
+            UIHelper.FormatearBoton(btnPeticiones);
 
             pnlBotones.Controls.AddRange(new Control[] { btnUsuarios, btnPeticiones });
 
@@ -116,7 +116,7 @@ namespace GestorPeticiones.Forms
             };
             btnCerrarSesion.FlatAppearance.BorderSize = 0;
             btnCerrarSesion.Click += (s, e) => Close();
-            UIHelper.HacerRedondeado(btnCerrarSesion, 10);
+            UIHelper.FormatearBoton(btnCerrarSesion, 10);
 
             Controls.AddRange(new Control[]
             {

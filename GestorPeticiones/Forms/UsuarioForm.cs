@@ -72,9 +72,9 @@ namespace GestorPeticiones.Forms
             btnEditar.Enabled   = false;
             btnEliminar.Enabled = false;
 
-            UIHelper.HacerRedondeado(btnNuevo);
-            UIHelper.HacerRedondeado(btnEditar);
-            UIHelper.HacerRedondeado(btnEliminar);
+            UIHelper.FormatearBoton(btnNuevo);
+            UIHelper.FormatearBoton(btnEditar);
+            UIHelper.FormatearBoton(btnEliminar);
 
             // ── Panel de detalle / edición ────────────────────────────────────
             grpDetalle = new GroupBox
@@ -108,8 +108,8 @@ namespace GestorPeticiones.Forms
             btnCancelar = CrearBoton("✖ Cancelar",  new Point(215, 260), Color.FromArgb(120, 120, 120), grpDetalle);
             btnGuardar.Click  += BtnGuardar_Click;
             btnCancelar.Click += (s, e) => MostrarDetalle(false);
-            UIHelper.HacerRedondeado(btnGuardar);
-            UIHelper.HacerRedondeado(btnCancelar);
+            UIHelper.FormatearBoton(btnGuardar);
+            UIHelper.FormatearBoton(btnCancelar);
 
             Controls.AddRange(new Control[]
             {

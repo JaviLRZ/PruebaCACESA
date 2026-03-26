@@ -30,7 +30,7 @@ namespace GestorPeticiones.Forms
         {
             // ── Formulario ────────────────────────────────────────────────────
             Text            = "Gestor de Peticiones – Iniciar sesión";
-            Size            = new Size(380, 280);
+            Size            = new Size(380, 320); // Aumentado el alto para dar aire al botón
             StartPosition   = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox     = false;
@@ -81,7 +81,7 @@ namespace GestorPeticiones.Forms
             btnEntrar = new Button
             {
                 Text      = "Entrar",
-                Location  = new Point(135, 210), // Centrado (380-110)/2
+                Location  = new Point(135, 225), // Movido un poco más abajo
                 Size      = new Size(110, 33),
                 BackColor = Color.FromArgb(30, 80, 160),
                 ForeColor = Color.White,
@@ -91,7 +91,7 @@ namespace GestorPeticiones.Forms
             };
             btnEntrar.FlatAppearance.BorderSize = 0;
             btnEntrar.Click += BtnEntrar_Click;
-            UIHelper.HacerRedondeado(btnEntrar);
+            UIHelper.FormatearBoton(btnEntrar);
 
             // ── Añadir controles ──────────────────────────────────────────────
             Controls.AddRange(new Control[]
